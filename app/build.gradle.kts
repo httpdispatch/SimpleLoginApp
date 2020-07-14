@@ -35,6 +35,16 @@ dependencies {
     implementation("androidx.core:core-ktx:1.3.0")
     implementation("androidx.appcompat:appcompat:1.1.0")
     implementation("androidx.constraintlayout:constraintlayout:1.1.3")
+
+    // Dagger
+    implementation("com.google.dagger:dagger:${Versions.DAGGER}")
+    kapt("com.google.dagger:dagger-compiler:${Versions.DAGGER}")
+    implementation("com.google.dagger:dagger-android-support:${Versions.DAGGER}")
+    kapt("com.google.dagger:dagger-android-processor:${Versions.DAGGER}")
+    // Using Dagger in androidTest and Robolectric too
+    kaptAndroidTest("com.google.dagger:dagger-compiler:${Versions.DAGGER}")
+    kaptTest("com.google.dagger:dagger-compiler:${Versions.DAGGER}")
+
     testImplementation("junit:junit:4.13")
     androidTestImplementation("androidx.test.ext:junit:1.1.1")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.2.0")
