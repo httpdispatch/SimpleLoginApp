@@ -35,6 +35,9 @@ dependencies {
     implementation("androidx.core:core-ktx:1.3.0")
     implementation("androidx.appcompat:appcompat:1.1.0")
     implementation("androidx.constraintlayout:constraintlayout:1.1.3")
+    implementation("com.google.android.material:material:1.1.0")
+    implementation("androidx.navigation:navigation-fragment-ktx:${Versions.NAVIGATION}")
+    implementation("androidx.navigation:navigation-ui-ktx:${Versions.NAVIGATION}")
 
     // Dagger
     implementation("com.google.dagger:dagger:${Versions.DAGGER}")
