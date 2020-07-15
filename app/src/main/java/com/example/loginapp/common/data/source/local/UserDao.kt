@@ -4,8 +4,9 @@ import com.example.loginapp.common.data.model.User
 import kotlinx.coroutines.CompletableDeferred
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
+import javax.inject.Inject
 
-class UserDao {
+class UserDao @Inject constructor() {
     // in-memory cache of the user object
     private var user: User = User.NO_USER
     private val mutex = Mutex()

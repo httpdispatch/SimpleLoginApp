@@ -9,6 +9,8 @@
         android:label="@string/profile_title">
         <action
             android:id="@+id/action_profileFragment_to_loginFragment"
+            app:popUpToInclusive="true"
+            app:popUpTo="@+id/profileFragment"
             app:destination="@id/loginFragment" />
     </fragment>
     <fragment
@@ -17,6 +19,8 @@
         android:label="@string/login_title">
         <action
             android:id="@+id/action_loginFragment_to_profileFragment"
+            app:popUpToInclusive="true"
+            app:popUpTo="@+id/loginFragment"
             app:destination="@id/profileFragment" />
     </fragment>
 </navigation>

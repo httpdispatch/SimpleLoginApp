@@ -10,7 +10,10 @@ plugins {
 android {
     compileSdkVersion(Constants.COMPILE_SDK_VERSION)
     buildToolsVersion = Constants.BUILD_TOOLS_VERSION
-
+    buildFeatures {
+        viewBinding = true
+        dataBinding = true
+    }
     defaultConfig {
         applicationId = "com.example.loginapp"
         minSdkVersion(Constants.MIN_SDK_VERSION)
@@ -27,6 +30,14 @@ android {
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }
     }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
 }
 
 dependencies {
@@ -40,6 +51,7 @@ dependencies {
     implementation("com.google.android.material:material:1.1.0")
     implementation("androidx.navigation:navigation-fragment-ktx:${Versions.NAVIGATION}")
     implementation("androidx.navigation:navigation-ui-ktx:${Versions.NAVIGATION}")
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.2.0")
 
     // Dagger
     implementation("com.google.dagger:dagger:${Versions.DAGGER}")

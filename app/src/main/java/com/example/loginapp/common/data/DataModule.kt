@@ -1,9 +1,6 @@
 package com.example.loginapp.common.data
 
-import com.example.loginapp.common.data.source.DefaultUserRepository
-import com.example.loginapp.common.data.source.LoginDataSource
-import com.example.loginapp.common.data.source.UserDataSource
-import com.example.loginapp.common.data.source.UserRepository
+import com.example.loginapp.common.data.source.*
 import com.example.loginapp.common.data.source.local.UserDao
 import com.example.loginapp.common.data.source.local.UserLocalDataSource
 import com.example.loginapp.common.data.source.remote.LoginRemoteDataSource
@@ -42,4 +39,8 @@ abstract class DataModuleBinds {
     @Singleton
     @Binds
     abstract fun bindRepository(repo: DefaultUserRepository): UserRepository
+
+    @Singleton
+    @Binds
+    abstract fun bindResources(resources: DefaultResourceDataSource): ResourceDataSource
 }

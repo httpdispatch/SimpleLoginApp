@@ -8,6 +8,6 @@ data class User(
         get() = userId.isNotEmpty()
 
     companion object {
-        val NO_USER = User()
+        val NO_USER = User(displayName = "Not logged in")
     }
 }

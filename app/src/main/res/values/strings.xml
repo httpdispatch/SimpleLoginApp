@@ -2,4 +2,9 @@
     <string name="app_name">LoginApp</string>
     <string name="login_title">Login</string>
     <string name="profile_title">Profile</string>
+    <string name="profile_loading_user">Loading…</string>
+    <string name="profile_load_user_error">Can\'t load user data</string>
+    <string name="profile_logging_out">Logging out…</string>
+    <string name="profile_logout_error">Logout error</string>
+    <string name="profile_logout">Logout</string>
 </resources>
