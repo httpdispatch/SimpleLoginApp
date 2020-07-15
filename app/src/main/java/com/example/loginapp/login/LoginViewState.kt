@@ -1,0 +1,41 @@
+package com.example.loginapp.login
+
+import com.example.loginapp.common.data.LoadingStatus
+import com.example.loginapp.common.data.loading
+import com.example.loginapp.common.data.model.User
+
+data class LoginViewState(
+    val status: LoadingStatus<User>,
+    val userName: String,
+    val password: String
+) {
+
+    val loggedIn: Boolean
+        get() = if (status is LoadingStatus.Success) {
+            status.data.loggedIn
+        } else {
+            false
+        }
+    val loginButtonEnabled: Boolean
+        get() = userName.isNotEmpty() && password.isNotEmpty()
+
+    val loading: Boolean
+        get() = status.loading
+
+    val error: Boolean
+        get() = status is LoadingStatus.Error
+
+    val loadingMessage: String
+        get() = if (status is LoadingStatus.Loading) {
+            status.message
+        } else {
+            ""
+        }
+
+    val errorMessage: String
+        get() = if (status is LoadingStatus.Error) {
+            status.message
+        } else {
+            ""
+        }
+}

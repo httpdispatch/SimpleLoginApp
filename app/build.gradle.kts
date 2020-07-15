@@ -53,6 +53,8 @@ dependencies {
     implementation("androidx.navigation:navigation-ui-ktx:${Versions.NAVIGATION}")
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.2.0")
 
+    implementation("com.jakewharton.timber:timber:4.7.1")
+
     // Dagger
     implementation("com.google.dagger:dagger:${Versions.DAGGER}")
     kapt("com.google.dagger:dagger-compiler:${Versions.DAGGER}")
