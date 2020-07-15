@@ -40,7 +40,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#55000000"
+            android:background="#88000000"
             android:clickable="true"
             android:visibility="@{viewState.loading}"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -57,13 +57,14 @@
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
+                android:textAppearance="?android:textAppearanceMediumInverse"
                 tools:text="test" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#55000000"
+            android:background="#88000000"
             android:clickable="true"
             android:visibility="@{viewState.error}"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -80,6 +81,7 @@
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
+                android:textAppearance="?android:textAppearanceMediumInverse"
                 tools:text="error" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </FrameLayout>
