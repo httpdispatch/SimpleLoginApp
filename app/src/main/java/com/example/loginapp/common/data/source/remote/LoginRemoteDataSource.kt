@@ -15,6 +15,7 @@ class LoginRemoteDataSource : LoginDataSource {
     }
 
     override suspend fun logout() {
+        delay(SERVICE_LATENCY_IN_MILLIS)
         // do nothing
     }
 
