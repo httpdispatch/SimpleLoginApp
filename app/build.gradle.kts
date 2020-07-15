@@ -55,6 +55,8 @@ dependencies {
 
     implementation("com.jakewharton.timber:timber:4.7.1")
 
+    implementation("com.squareup.moshi:moshi-kotlin:1.9.3")
+
     // Dagger
     implementation("com.google.dagger:dagger:${Versions.DAGGER}")
     kapt("com.google.dagger:dagger-compiler:${Versions.DAGGER}")

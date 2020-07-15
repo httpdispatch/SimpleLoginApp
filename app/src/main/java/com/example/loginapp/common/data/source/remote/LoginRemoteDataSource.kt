@@ -8,7 +8,7 @@ import kotlin.random.Random
 class LoginRemoteDataSource : LoginDataSource {
     override suspend fun login(username: String, password: String): User {
         delay(SERVICE_LATENCY_IN_MILLIS)
-        return if (Random.nextInt(0, 100) > 90)
+        return if (Random.nextInt(0, 100) > 50)
             User("id", username)
         else
             throw Exception("Random exception")
